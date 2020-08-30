@@ -1,4 +1,34 @@
-* {
-    box-sizing: border-box;
+var primary
 
-    
+    body {
+        background: lightyellow;
+        color: grey;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      
+      header {
+        background: lightblue;
+        padding: 30px 25px;
+        border-bottom: 5px solid rgb(0, 162, 255);
+        
+        width: 100%;
+
+
+      }
+      .container{
+        margin: auto;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+      }
+      
+      .start{
+          display: center;
+          
+      }
