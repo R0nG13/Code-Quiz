@@ -56,85 +56,86 @@ var questions = [
     correct : "C"
     }
 ]
-var lastQuestionIndex = questions.length - 1;
+var lastQuestionIndex = 4;
 var runningQuestionIndex = 0;
 
+var count = 60;
+var timer;
 
-
+//start function to call timer and quiz
 function startQuiz() {
     
-    
-    
-    
-    
-    
-    
-    
     var startScreen = document.getElementById("start");
-
+    startScreen.style.display = "none";
+    quiz.style.display = "block";
+    renderQuestions();
+    timer = setInterval(countdown, 1000);
+    counter.textContent = count;
+ 
 }
-
-
-
-
 
 // Timer that counts down from 5
 function countdown() {
-  var timeLeft = 60;
+  count--;
+  counter.textContent = count;
+  if (count == 0) {
+      gameOver()
+   }
+  }
 
-  // Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
-  var timeInterval = setInterval(function() {
-    if (timeLeft > 1) {
-      timerEl.textContent = timeLeft + ' seconds remaining';
-      timeLeft--;
-    } else if (timeLeft === 1) {
-      timerEl.textContent = timeLeft + ' second remaining';
-      timeLeft--;
-    } else {
-      timerEl.textContent = '';
-      clearInterval(timeInterval);
-      displayMessage();
-    }
-  }, 1000);
-}
-
-
-/*function counterRender(){
-    if(count > 0){
-        counter.innerHTML = testTime;
-        timeGauge.style.width = guageProgressUnit * testTime - "px";
-        count--;
-        }
-        else{
-            count = 0;
-            clearInterval(TIMER);
-            scoreRender();
-        }
-}*/
-
-
-
-// Questions section
-
-function renderQuestions(){
+ 
+  function renderQuestions(){
     let q = questions[runningQuestionIndex];
     question.innerHTML = "<p>" + q.question + "</p>"
     choiceA.innerHTML = q.choiceA;
     choiceB.innerHTML = q.choiceB;
     choiceC.innerHTML = q.choiceC;
     choiceD.innerHTML = q.choiceD;
-}
+} 
 
-
-function progressRender(){
-for (var qIndex = 0; qIndex <= lastQuestionIndex; qIndex++) {
+function checkAnswer(answer){
+    if(answer !== questions[runningQuestionIndex].correct){
+    count -= 10;
     
+        if (count <= 0) {
+        gameOver();
+        }
+        counter.textContent = count;
+        answerText.textContent = "Incorrect!"
+    }
+    else{
+        answerText.textContent = "Correct!"
+    }
+    if(runningQuestionIndex < lastQuestionIndex) {
+    runningQuestionIndex++;
+    renderQuestions();
+    }
+    else{
+    gameOver();
+    }
 }
-//how do we take time away form the clock if wrong
+
+function gameOver() {
+
+    clearInterval(timer);
+    quiz.style.display = "none";
+    Over.style.display = "block";
+    score.textContent = count;
+
+}
+
+function saveScore() {
+    
+
+}
 
 
 
 
+  
+  
+  
+ 
 
 
-startBtn.onclick = countdown, renderQuestions;
+startBtn.addEventListener("click", startQuiz);
