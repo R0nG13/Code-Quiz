@@ -6,7 +6,7 @@
 
 
 # Screen Shot
-<img src="./assets/pw-gen-screenshot.jpg" width="400px;">
+<img src="./assets/Screen Shot 2020-08-31 at 12.08.48 AM.png" width="400px;">
 
 # website
 https://r0ng13.github.io/Code-Quiz/
