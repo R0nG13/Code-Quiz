@@ -7,26 +7,34 @@
     <title>Code Quiz</title>
     <link rel="stylesheet" href="./assets/style.css">
 </head>
-
-<body>
-   
-    <header>
-       <div class="container"> 
-        <h2 id="highScores"> High Scores </h2>
-        <h1>Coding Quiz</h1>
-        <h2 id="countdown">60 seconds</h2>
-       </div>
-    </header>
+<body> 
     
-    <div>
-        <button id="start">Start</button>
-        <p id = "timerText"></p>
-   
-    </div>
-    <div id="test"></div>
+        <div id="highScores"> High Scores </div> 
+        <div id="counter"><span id="count"></span></div>
          
-   
-   
+
+    <div id="start">
+     <p>Beat the clock. You have 60 sec to answer 5 questions. Every wrong cost you 10 seconds.</p>
+     <button id="start">Start</button>
+    </div>
+    
+    <div id="quiz" style = "display: none;">
+        <div id="question"><p> Question </p></div>
+         <div id="choices">
+             <div class = "choice" id="A" onclick="checkAnswer('A')">A</div>
+             <div class = "choice" id="B" onclick="checkAnswer('B')">B</div>
+             <div class = "choice" id="C" onclick="checkAnswer('C')">C</div>
+             <div class = "choice" id="D" onclick="checkAnswer('D')">D</div>
+         </div>   
+       <p id = "answerText"></p>   
+    </div> 
+
+    <div id="gameOver" style = "display: none;">
+        <h2> GAME OVER! </h2>
+        <p>Your Score Is:<span id="finalScore"></span></p>
+        <input id="name" type="text" max="10">
+        <button id="save">save</button>
+    </div>
     
     <script src = "./assets/script.js"></script>
 </body>
