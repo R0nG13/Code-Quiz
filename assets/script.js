@@ -16,9 +16,9 @@ var questions = [
     question : "Commonly used data types DO NOT Include:",
     choiceA : "A strings",
     choiceB : "B booleans",
-    choiceC : "C alerts",
-    choiceD : "D numbers",
-    correct : "C"
+    choiceC : "C numbers",
+    choiceD : "D alerts",
+    correct : "D"
     },
 
     {
@@ -31,29 +31,29 @@ var questions = [
     },
     
     {
-    question : "Commonly used data types DO NOT Include:",
-    choiceA : "1. strings",
-    choiceB : "2. booleans",
-    choiceC : "3. alerts",
-    choiceD : "4. numbers",
-    correct : "C"
+    question : "A very useful tool used during development and debugging for printing content to the debugger is:",
+    choiceA : "A JavaScript",
+    choiceB : "B console.log",
+    choiceC : "C terminal / bash",
+    choiceD : "D for loops",
+    correct : "B"
     },
 
     {
-    question : "Commonly used data types DO NOT Include:",
-    choiceA : "1. strings",
-    choiceB : "2. booleans",
-    choiceC : "3. alerts",
-    choiceD : "4. numbers",
-    correct : "C"
+    question : "String values must be enclosed within ____ when being assigned to variables.",
+    choiceA : "A quotes",
+    choiceB : "B curly brackets",
+    choiceC : "C commas",
+    choiceD : "D parentheses",
+    correct : "A"
     },
     {
-    question : "Commonly used data types DO NOT Include:",
-    choiceA : "strings",
-    choiceB : "2. booleans",
-    choiceC : "3. alerts",
-    choiceD : "4. numbers",
-    correct : "C"
+    question : "Arrays in JavaScript can be used to store ____.",
+    choiceA : "A numbers and stings",
+    choiceB : "B other arrays",
+    choiceC : "C booleans",
+    choiceD : "D all of the above",
+    correct : "D"
     }
 ]
 var lastQuestionIndex = 4;
