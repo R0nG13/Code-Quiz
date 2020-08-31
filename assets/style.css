@@ -2,3 +2,53 @@ body {
     background-color: lightyellow;
     font-family: 'Courier New', Courier, monospace;
 }
+#container {
+    display:flex;
+    justify-content: space-between;
+
+}
+
+#highScores, #counter {
+    font-weight:bold;
+    font-size: 1.5em;
+    color: blue;
+    
+}
+
+#startScreen {
+    text-align: center;
+    color: blue;
+    font-size: larger;
+}
+
+#quiz{
+    text-align: center;
+    color: blue;
+
+}
+
+#choices{
+    display: block;
+}
+button {
+    display: inline-block;
+    margin: 5px;
+    font-size: 100%;
+    background-color: lightblue;
+    border-radius: 5px;
+    padding: 2px 10px;
+    color: blue;
+    border: 0;
+    
+  }
+
+#question {
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+#Over {
+    text-align: center;
+    font-size: larger;
+    color: blue;
+}

@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body> 
-
+    <div id="container">
         <div id="highScores"> High Scores </div> 
         <div id="counter"><span id="count"></span></div>
-         
+    </div>
 
-    <div id="start">
+    <div id="startScreen" >
      <p>Beat the clock. You have 60 sec to answer 5 questions. Every wrong cost you 10 seconds.</p>
      <button id="start">Start</button>
     </div>
@@ -21,10 +21,10 @@
     <div id="quiz" style = "display: none">
         <div id="question"><p> Question </p></div>
          <div id="choices">
-             <div class = "choice" id="A" onclick="checkAnswer('A')">A</div>
-             <div class = "choice" id="B" onclick="checkAnswer('B')">B</div>
-             <div class = "choice" id="C" onclick="checkAnswer('C')">C</div>
-             <div class = "choice" id="D" onclick="checkAnswer('D')">D</div>
+             <button class = "choice" id="A" onclick="checkAnswer('A')">A</button>
+             <button class = "choice" id="B" onclick="checkAnswer('B')">B</button>
+             <button class = "choice" id="C" onclick="checkAnswer('C')">C</button>
+             <button class = "choice" id="D" onclick="checkAnswer('D')">D</button>
          </div>   
        <p id = "answerText"></p>   
     </div> 

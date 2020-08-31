@@ -65,7 +65,7 @@ var timer;
 //start function to call timer and quiz
 function startQuiz() {
     
-    var startScreen = document.getElementById("start");
+  
     startScreen.style.display = "none";
     quiz.style.display = "block";
     renderQuestions();
