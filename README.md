@@ -6,7 +6,7 @@
 
 
 # Screen Shot
-
+<img src="./assets/pw-gen-screenshot.jpg" width="400px;">
 
 # website
 https://r0ng13.github.io/Code-Quiz/
